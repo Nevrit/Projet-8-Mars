@@ -16,7 +16,7 @@ html , body {
 
 /* Section principale */
 .hero-section {
-    background: url('/images/2.jpg') no-repeat center center/cover;
+    background: url('/image/2.jpg') no-repeat center center/cover;
     height: 400px;
     display: flex;
     align-items: center;
