@@ -1,16 +1,21 @@
 /* Styles généraux */
-*{
+* {
     max-width: 100%;
     box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
-    font-family: Arial, sans-serif;
-   font-size: larger;
-   background: linear-gradient(135deg, #ffffff 0%, #e0d6f5 50%, #8a2be2 100%);
+    /* font-family: Arial, sans-serif; */
+    font-size: larger;
+    background: linear-gradient(135deg, #ffffff 0%, #e0d6f5 50%, #8a2be2 100%);
 }
 
-html , body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -21,10 +26,11 @@ html , body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border:  rgb(212, 7, 86) 2px solid;
+    border: rgb(212, 7, 86) 2px solid;
     position: relative;
 
 }
+
 .hero-section::before {
     content: "";
     position: absolute;
@@ -35,6 +41,7 @@ html , body {
     background: rgba(19, 12, 19, 0.6);
 
 }
+
 .hero-section h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -54,7 +61,7 @@ html , body {
 
 /* Section stats */
 .stats-section {
-    background: url('/image/2.jpg') no-repeat center center/cover;
+    background: url('/images/2.jpg') no-repeat center center/cover;
     height: 10%;
     display: flex;
     align-items: center;
@@ -62,7 +69,7 @@ html , body {
     position: relative;
 }
 
-.stats-section::before{
+.stats-section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -71,7 +78,8 @@ html , body {
     height: 100%;
     background: rgba(24, 17, 19, 0.6);
 }
-.stats-section p{
+
+.stats-section p {
     color: white;
     position: relative;
 }
@@ -118,20 +126,16 @@ html , body {
 .footer p {
     margin: 0;
 }
-.titre1{
-color: #fff;
-background-color: rgb(212, 7, 86);
-border-radius: 20px;
-width: 80%;
+
+.titre1 {
+    color: #fff;
+    background-color: rgb(212, 7, 86);
+    border-radius: 20px;
+    width: 80%;
 
 }
 
-
-
 /*progresse-bar*/
-
-
-
 .container {
     display: flex;
     justify-content: center;
@@ -165,9 +169,6 @@ width: 80%;
     border-radius: 50%;
 }
 
-
-
-
 .crucial-section {
     padding: 60px 20px;
     text-align: center;
@@ -195,8 +196,6 @@ width: 80%;
 
 
 /* formulaire*/
-
-
 
 /* Conteneur du formulaire */
 .form-container {
@@ -257,13 +256,13 @@ width: 80%;
 
 /*effet Dynamique*/
 
-.row > div {
+.row>div {
     opacity: 0;
     transform: translateY(50px) scale(0.95);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.row > div.visible {
+.row>div.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
