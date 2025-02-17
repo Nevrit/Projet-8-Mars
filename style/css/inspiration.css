@@ -1,0 +1,311 @@
+/* Reset de base */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Playfair Display', serif;
+    font-optical-sizing: auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #2c3943;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    /* Assure une hauteur fixe */
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #f04;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f04;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    /* Animation de la bordure */
+}
+
+
+.quote-btn {
+    background: transparent;
+    border: 2px solid #f04;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #f04;
+}
+
+.quote-btn:hover {
+    background: #f04;
+    color: #fff;
+}
+
+/* Section Banner */
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url('../../images/assets/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Section Valorisation et Inspiration */
+.pg-inspi-section-1 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pg-inspi-titre-section-3 {
+    text-decoration: underline;
+    color: #000033;
+    font-size: 30pt;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+
+.pg-inspi-paragraph-section-3 {
+    margin-top: 15px;
+}
+
+
+/* Footer global */
+.custom-footer {
+    background: #fff;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    padding-top: 40px;
+}
+
+/* Footer Top */
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-top h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-top p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-links ul,
+.footer-newsletter ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f04;
+}
+
+/* Contact icons styling */
+.footer-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+    color: #f04;
+}
+
+/* Newsletter form */
+.footer-newsletter form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.footer-newsletter input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.footer-newsletter button.btn-red {
+    background: #f04;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.footer-newsletter button.btn-red:hover {
+    background: #d03;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 20px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    margin-left: 15px;
+}
+
+.social-icons li a {
+    color: #f04;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+    color: #d03;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .text-md-right {
+        text-align: center !important;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+
+.testimonial-container {
+    background-color: #f8f9fa;
+    padding: 60px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.testimonial-blockquote {
+    background-color: #fff;
+    border-left: 4px solid #28a745;
+    padding: 20px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.testimonialImg {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #28a745;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1);
+}
+
+/* Ajout d'un effet de survol pour les témoignages */
+.testimonial-blockquote:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}

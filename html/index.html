@@ -12,183 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../style/css/style.css">
     <title>AVIF-Accueil</title>
-
-    <style>
-      /* style pour le corps de la page body */
-
-      * {
-          max-width: 100%;
-          box-sizing: border-box;
-          font-family: "Playfair Display", serif;
-          font-optical-sizing: auto;
-          font-weight: 300;
-          font-style: normal;
-        }
-      .body {
-        /* background-image: radial-gradient(circle, white, beige); */
-        /* background-color: #ebf2f2; */
-        background-size: 100% 100%;
-      }
-
-      /* style pour les titres des sections */
-      h2 {
-        text-align: center;
-        font-size: 50px;
-        font-weight: bold;
-        /* background-color: rgb(212, 7, 86); */
-        color: rgb(212, 7, 86);
-        margin-bottom: 50px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        border-radius: 10px;
-        padding: 5px;
-      }
-
-      /* style pour les boutons */
-      .btn {
-        background-color: rgb(212, 7, 86);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: #8a2be2;
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-      }
-
-      /* style pour les liens de navigation */
-      .navbar-brand img:hover {
-        transform: scale(1.1);
-        transition: transform 0.2s ease-in-out;
-      }
-
-      .navbar-nav li a:hover, .nav_footer li a:hover {
-       color: rgb(212, 7, 86);
-     }
-
-     .navbar-nav li a {
-       font-weight: bold;
-       font-size: 1.1em;
-       color: black;
-       transition: color 0.3s ease-in-out;
-     }
-
-     .nav_footer li a {
-       font-weight: bold;
-       font-size: 1.1em;
-       color: white;
-       transition: color 0.3s ease-in-out;
-      }
-
-      /* style pour la section de la bannière */
-      .carousel-caption h1, .carousel-caption p {
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        transition: text-shadow 0.3s ease;
-        color: white;
-        text-align: center;
-      }
-
-      .carousel-caption p {
-        font-size: 20px;
-      }
-
-     /* style pour la carte de contact */
-      .card-form-contact{
-      box-shadow: 2px 6px 12px 2px rgba(0,0,0,0.2);
-      transition: box-shadow 0.3s ease;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      padding: 30px;
-      background-color: transparent;
-     }
-
-     .card-form-contact input, textarea {
-      padding: 8px 15px;
-      border-radius: 5px !important;
-      margin: 5px 0px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      font-size: 18px !important;
-      font-weight: 300;
-     }
-
-     .card-form-contact input:focus, textarea:focus {
-      -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important;
-      border: 1px solid #00BCD4;
-      outline-width: 0;
-      font-weight: 400;
-     }
-
-     .btn-block {
-      text-transform: uppercase;
-      font-size: 15px !important;
-      font-weight: 400;
-      height: 43px;
-      cursor: pointer;
-     }
-
-     .btn-block:hover {
-      color: #fff !important;
-     }
-
-     .btn-block:focus {
-      -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important;
-      outline-width: 0;
-     }
-
-    /* style pour le carrousel des partenaires */
-   .partners {
-     display: flex;
-     width: 100%;
-     animation: slide 20s linear infinite;
-   }
-
-   @keyframes slide {
-     0% {
-       transform: translateX(0);
-     }
-     100% {
-       transform: translateX(-50%);
-     }
-   }
-
-   /* style pour les icônes */
-   i {
-     color: rgb(212, 7, 86);
-    }
-
-    /* style pour les cards de la Section nos Services */
-   .card i {
-      color: black;
-    }
-
-    .card-service {
-      /* border: 2px solid rgb(212, 7, 86); */
-      box-shadow: 2px 6px 12px 2px rgba(0,0,0,0.2);
-      transition: box-shadow 0.3s ease;
-      margin-bottom: 10px;
-      border-radius: 15px;
-      padding: 30px;
-      background-color: transparent;
-    }
-    
-    section {
-      margin-top:70px;
-    }
-
-    .about, .contact-us{
-      background-color: #ebf2f2;
-    }
-    </style>
 
 </head>
 <body class="body">
@@ -209,7 +34,7 @@
                 <a class="nav-link active" aria-current="page" href="../images/html/index.html">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../images/html/inspiration.html">Inspiration</a>
+                <a class="nav-link" href="../html/inspiration.html">Inspiration</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../html/plaidoyer.html">Plaidoyer</a>
@@ -524,7 +349,7 @@
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="../images/IMAGE/PICTURES/inspirante3.jpg" class="img-fluid rounded-start" alt="femme1">
+              <img src="../images/IMAGE/PICTURES/inspirante1.jpg" class="img-fluid rounded-start" alt="femme1">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -540,7 +365,7 @@
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="../images/IMAGE/PICTURES/inspirante3.jpg" class="img-fluid rounded-start" alt="femme1">
+              <img src="../images/IMAGE/PICTURES/inspirante2.jpg" class="img-fluid rounded-start" alt="femme1">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -554,7 +379,7 @@
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="/Projet-8-Mars/IMAGE/PICTURES/inspirante3.jpg" class="img-fluid rounded-start" alt="femme1">
+              <img src="../images/IMAGE/PICTURES/inspirante3.jpg" class="img-fluid rounded-start" alt="femme1">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -575,14 +400,14 @@
         <!-- Mini Menu -->
         <div class="col-3 col-md-3 mb-3">
           <h5 class="fs-3 fw-bold">Navigation</h5>
-          <div style="padding-left: 45px;">
+          <div>
             <ul class="nav nav_footer flex-column justify-content-center">
-              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/index.html" class="nav-link p-0 text-body-secondary">Accueil</a></li>
-              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/inspiration.html" class="nav-link p-0 text-body-secondary">Inspiration</a></li>
-              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/plaidoyer.html" class="nav-link p-0 text-body-secondary">Plaidoyer</a></li>
+              <li class="nav-item mb-2"><a href="../html/index.html" class="nav-link p-0 text-body-secondary">Accueil</a></li>
+              <li class="nav-item mb-2"><a href="../html/inspiration.html" class="nav-link p-0 text-body-secondary">Inspiration</a></li>
+              <li class="nav-item mb-2"><a href="../html/plaidoyer.html" class="nav-link p-0 text-body-secondary">Plaidoyer</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Networking</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Education</a></li>
-              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/about.html" class="nav-link p-0 text-body-secondary">A Propos</a></li>
+              <li class="nav-item mb-2"><a href="../html/about.html" class="nav-link p-0 text-body-secondary">A Propos</a></li>
             </ul>
           </div>
         </div>
