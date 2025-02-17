@@ -128,8 +128,8 @@ body {
 }
 
 .titre1 {
-    color: #fff;
-    background-color: rgb(212, 7, 86);
+    color: rgb(212, 7, 86);
+    /* background-color: rgb(212, 7, 86); */
     border-radius: 20px;
     width: 80%;
 

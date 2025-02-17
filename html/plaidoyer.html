@@ -14,6 +14,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style/css/style.css" />
     <!-- Ajout du CDN FontAwesome pour les icônes -->
     <link
@@ -23,15 +29,15 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container border-bottom border-2 border-body-secondary">
+    <header class="container">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+        <div class="container border-body-secondary">
           <a class="navbar-brand" href="#">
             <img
-              src="/images/logo.jpg"
+              src="../images/IMAGE/LOGO/logo_avif_01.png"
               alt="logo AVIF"
-              width="70"
-              height="60"
+              width="50"
+              height="50"
               class="d-inline-block align-text-top mx-5"
             />
           </a>
@@ -47,17 +53,25 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto gap-4">
+            <ul class="navbar-nav me-auto mb-lg-0 mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../html/index.html"
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../html/index.html"
                   >Accueil</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Inspiration</a>
+                <a class="nav-link" href="../images/html/inspiration.html"
+                  >Inspiration</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../html/plaidoyer.html"
                   >Plaidoyer</a
                 >
               </li>
@@ -65,12 +79,14 @@
                 <a class="nav-link" href="#">Networking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link" aria-current="page" href="#"
                   >Education</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">A Propos</a>
+                <a class="nav-link" href="../images/html/about.html"
+                  >A Propos</a
+                >
               </li>
             </ul>
           </div>
@@ -320,157 +336,72 @@
       id="footer"
       style="background-color: #ebf2f2"
     >
-      <footer class="container py-5">
-        <div class="row d-flex gap-5 px-4">
-          <!-- Mini Menu -->
-          <div class="col-3 col-md-3 mb-3">
-            <h5 class="fs-3 fw-bold">Nos Sections</h5>
-            <ul class="nav nav_footer flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Accueil</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Inspiration</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Plaidoyer</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Networking</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Education</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >A Propos</a
-                >
-              </li>
-            </ul>
-          </div>
+    <footer class="container py-5">
+      <div class="row d-flex gap-5 px-4">
 
-          <!-- Contact -->
-          <div class="col-md-3 col-3 mb-3">
-            <h5 class="fs-3 fw-bold">Contact</h5>
-            <ul class="list-unstyled">
-              <li class="d-flex align-items-center gap-2 mb-3">
-                <i
-                  class="fa-solid fa-location-dot me-2 fa-2x"
-                  style="color: #0587eb"
-                ></i>
-                <span class="fs-5">Abidjan, Côte d'Ivoire</span>
-              </li>
-              <li class="d-flex align-items-center gap-2 mb-3">
-                <i
-                  class="fa-solid fa-phone-flip me-2 fa-2x"
-                  style="color: #0587eb"
-                ></i>
-                <span class="fs-5">+225 07 07 07 07</span>
-              </li>
-              <li class="d-flex align-items-center gap-2 mb-2">
-                <i
-                  class="fa-solid fa-envelope me-2 fa-2x"
-                  style="color: #0587eb"
-                ></i>
-                <span class="fs-5">jYc8o@example.com</span>
-              </li>
+        <!-- Mini Menu -->
+        <div class="col-3 col-md-3 mb-3">
+          <h5 class="fs-3 fw-bold">Navigation</h5>
+          <div style="padding-left: 45px;">
+            <ul class="nav nav_footer flex-column justify-content-center">
+              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/index.html" class="nav-link p-0 text-body-secondary">Accueil</a></li>
+              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/inspiration.html" class="nav-link p-0 text-body-secondary">Inspiration</a></li>
+              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/plaidoyer.html" class="nav-link p-0 text-body-secondary">Plaidoyer</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Networking</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Education</a></li>
+              <li class="nav-item mb-2"><a href="/Projet-8-Mars/html/about.html" class="nav-link p-0 text-body-secondary">A Propos</a></li>
             </ul>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="col-md-5 col-6 mb-3">
-            <form>
-              <h5 class="fs-3 fw-bold">Abonnez-vous à notre newsletter</h5>
-              <p>
-                Un résumé mensuel de nos nouveautés et de nos actualités
-                passionnantes.
-              </p>
-              <div class="form-group d-flex flex-column gap-2">
-                <div class="d-flex flex-column flex-sm-row gap-2">
-                  <input
-                    id="newsletterName"
-                    type="text"
-                    class="form-control"
-                    placeholder="Votre nom"
-                  />
-                  <input
-                    id="newsletterSurname"
-                    type="text"
-                    class="form-control"
-                    placeholder="Votre prénom"
-                  />
-                </div>
-                <div class="d-flex flex-column flex-sm-row gap-2">
-                  <input
-                    id="newsletterNumber"
-                    type="number"
-                    class="form-control"
-                    placeholder="Votre contact"
-                  />
-                  <input
-                    id="newsletterEmail"
-                    type="text"
-                    class="form-control"
-                    placeholder="Email address"
-                  />
-                </div>
-                <small class="form-text text-muted"
-                  >Nous ne partagerons pas vos informations avec des
-                  tiers.</small
-                >
-                <!-- Bouton avec icône -->
-                <div class="row me-auto px-3">
-                  <button
-                    type="submit"
-                    class="btn btn-primary btn-lg d-flex align-items-center justify-content-center me-auto"
-                  >
-                    <i class="fas fa-paper-plane me-2"></i>
-                    <!-- Icône de l'envoi -->
-                    Envoyer
-                  </button>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
 
-        <!-- Réseaux sociaux -->
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-center pt-4 border-top"
-        >
-          <p>&copy; 2025 AVIF, Inc. Tous droits réservés.</p>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><i class="fab fa-twitter fa-2x"></i
-              ></a>
+        <!-- Contact -->
+        <div class="col-md-3 col-3 mb-3">
+          <h5 class="fs-3 fw-bold">Contacts</h5>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center gap-2 mb-3">
+              <i class="fa-solid fa-location-dot me-2 fa-2x"></i>
+              <span class="fs-5">Abidjan, Côte d'Ivoire</span>
             </li>
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><i class="fab fa-facebook fa-2x"></i
-              ></a>
+            <li class="d-flex align-items-center gap-2 mb-3">
+              <i class="fa-solid fa-phone-flip me-2 fa-2x"></i>
+              <span class="fs-5">+225 07 07 07 07</span>
             </li>
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><i class="fab fa-linkedin fa-2x"></i
-              ></a>
-            </li>
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><i class="fab fa-instagram fa-2x"></i
-              ></a>
+            <li class="d-flex align-items-center gap-2 mb-2">
+              <i class="fa-solid fa-envelope me-2 fa-2x"></i>
+              <span class="fs-5">jYc8o@example.com</span>
             </li>
           </ul>
         </div>
-      </footer>
+
+        <!-- Newsletter -->
+        <div class="col-md-5 col-6 mb-3">
+          <form>
+            <h5 class="fs-3 fw-bold">Abonnez-vous à notre newsletter</h5>
+            <p>Un résumé mensuel de nos nouveautés et de nos actualités passionnantes.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <!-- Bouton avec icône -->
+              <button type="submit" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center mx-auto">
+                 <i class="fas fa-paper-plane me-2" style="color: white;"></i> <!-- Icône de l'envoi -->
+                 Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="d-flex flex-column flex-sm-row justify-content-center pt-4 border-top">
+        <p>&copy; 2025 AVIF, Inc. Tous droits réservés.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fab fa-facebook fa-2x"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+        </ul>
+      </div>
+    </footer>
     </div>
     <script src="/style/js/script.js"></script>
 
