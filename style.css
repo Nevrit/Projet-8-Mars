@@ -7,21 +7,26 @@
 .jumbotron {
     background-color: #fffaee;
 }
-
+.jumbotron-abus{
+    background-image: url(image/justice_statue.jpg);
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 section {
     margin-top: 70px;
 }
 
 .card-etudiant {
-    background-color: #fdfbe0;
+    background-color: #fdfbe0 !important;
 }
 
 .card-employeurs {
-    background-color: #ebeefb;
+    background-color: #ebeefb !important;
 }
 
 .btn {
-    background-color: #7451eb;
+    background-color: #7451eb !important;
 }
 
 h4 {
@@ -160,4 +165,8 @@ blockquote {
 
 .form-container .btn {
     border-radius: 5px;
+}
+.sensibilisation-section{
+    background-color: #D77B09;
+    padding: 50px;
 }
