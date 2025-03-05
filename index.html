@@ -57,6 +57,7 @@
             <ul class="navbar-nav mx-auto text-secondary">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link active" aria-current="page" href="index.html"
                   >Accueil</a
                 >
               </li>
@@ -83,8 +84,30 @@
                 <i class="bi bi-person-circle"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Créer mon compte</a></li>
-                <li><a class="dropdown-item" href="#">Se connecter</a></li>
+                <li>
+                  <a
+                    id="createAccount"
+                    class="dropdown-item"
+                    href="inscription.html"
+                    >Créer mon compte</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    id="connectionBtn"
+                    href="connection.html"
+                    >Se connecter</a
+                  >
+                </li>
+                <li>
+                  <a id="userConnected" class="dropdown-item" href="#"></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" type="button" id="logout" href="#"
+                    >Déconnexion</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -182,14 +205,18 @@
           <div class="col-sm-6">
             <div class="card card-etudiant">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Étudiants</h5>
+                <h5 class="card-title fw-bold">Violence basée sur le genre</h5>
                 <p class="card-text">
-                  Faites un grand pas vers votre nouvelle carrière en suivant
-                  l’une de nos formations diplômantes.
+                  La violence basée sur le genre est une violation des droits
+                  humains. Il est crucial de sensibiliser et de lutter contre
+                  toutes les formes de violence pour protéger et soutenir les
+                  femmes.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.unwomen.org/en/what-we-do/ending-violence-against-women"
+                    class="btn btn-primary"
+                    >En Savoir +</a
                   >
                 </div>
               </div>
@@ -198,14 +225,20 @@
           <div class="col-sm-6">
             <div class="card card-employeurs">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Employeurs</h5>
+                <h5 class="card-title fw-bold">
+                  Droits sexuels et reproductifs
+                </h5>
                 <p class="card-text fw-light">
-                  Recrutez des alternants quand vous en avez besoin et formez
-                  vos équipes à des compétences opérationnelles.
+                  Les droits sexuels et reproductifs sont essentiels pour
+                  l'autonomie des femmes. Garantir ces droits permet aux femmes
+                  de prendre des décisions éclairées sur leur santé et leur
+                  corps.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.who.int/reproductivehealth/topics/rights/en/"
+                    class="btn btn-primary"
+                    >En Savoir +</a
                   >
                 </div>
               </div>
@@ -214,14 +247,17 @@
           <div class="col-sm-6">
             <div class="card card-employeurs">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Employeurs</h5>
+                <h5 class="card-title fw-bold">Participation politique</h5>
                 <p class="card-text fw-light">
-                  Recrutez des alternants quand vous en avez besoin et formez
-                  vos équipes à des compétences opérationnelles.
+                  La participation politique des femmes est cruciale pour une
+                  société équitable. Encourager et soutenir les femmes dans la
+                  politique renforce la démocratie et l'égalité des genres.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.unwomen.org/en/what-we-do/leadership-and-political-participation"
+                    class="btn btn-primary"
+                    >En Savoir +</a
                   >
                 </div>
               </div>
@@ -230,14 +266,18 @@
           <div class="col-sm-6">
             <div class="card card-etudiant">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Étudiants</h5>
+                <h5 class="card-title fw-bold">Droit à l'éducation</h5>
                 <p class="card-text">
-                  Faites un grand pas vers votre nouvelle carrière en suivant
-                  l’une de nos formations diplômantes.
+                  L'éducation est un droit fondamental pour tous. Assurer
+                  l'accès à l'éducation pour les filles et les femmes est
+                  essentiel pour leur émancipation et leur développement
+                  personnel et professionnel.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.unesco.org/en/education/girls-women"
+                    class="btn btn-primary"
+                    >En Savoir +</a
                   >
                 </div>
               </div>
@@ -250,86 +290,106 @@
     <section class="learning-section">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="savoir-faire">Savoir. Faire. Savoir-faire.</h2>
+          <h2 class="savoir-faire">La Résilience des Femmes</h2>
           <h5 class="fw-light">
-            Avec OpenClassrooms, découvrez une nouvelle façon d'apprendre : 20%
-            de théorie, 80% de pratique.
+            Découvrez comment les femmes du monde entier résistent à
+            l'oppression et se battent pour leurs droits.
           </h5>
         </div>
         <div class="row text-center gy-5">
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <div>
-              <img
+              <svg
                 class="rounded-circle"
-                src="https://openclassrooms.com/modules/sdzv4-main/latest/images/online_study-011feaaa33df196e1ae0.svg"
-                alt=""
-              />
+                width="100"
+                height="100"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-book"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1 2.828c.885-.37 2.154-.828 4-.828s3.115.458 4 .828V13.17c-.885-.37-2.154-.828-4-.828s-3.115.458-4 .828V2.828zM0 1.5v13a.5.5 0 0 0 .757.429C1.614 14.36 3.154 13.5 5 13.5c1.846 0 3.386.86 4.243 1.429A.5.5 0 0 0 10 14.5v-13a.5.5 0 0 0-.757-.429C8.386 2.14 6.846 3 5 3c-1.846 0-3.386-.86-4.243-1.429A.5.5 0 0 0 0 1.5z"
+                />
+              </svg>
             </div>
             <div>
-              <h4>
-                Apprenez <br />
-                où que vous soyez
-              </h4>
+              <h4>Accès à l'Éducation</h4>
               <p>
-                Accédez à votre formation 100% en ligne au bureau, à la maison,
-                en ville, à la montagne... Partout !
+                Les femmes se battent pour leur droit à l'éducation, ouvrant des
+                portes vers un avenir meilleur.
               </p>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <div>
-              <img
+              <svg
                 class="rounded-circle"
-                src="https://openclassrooms.com/modules/sdzv4-main/latest/images/mentoring-d3132f53ba0a521499a9.svg"
-                alt=""
-              />
+                width="100"
+                height="100"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-people"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.5 7a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm5 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM5.5 8a4.5 4.5 0 0 0-4.473 4H1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-.027a4.5 4.5 0 0 0-4.473-4zM0 12a3.5 3.5 0 0 1 6.978 0H0zm11-4a4.5 4.5 0 0 1 4.473 4H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h.027A4.5 4.5 0 0 1 11 8zm-1 4a3.5 3.5 0 0 0-3.5-3.5h-1A3.5 3.5 0 0 0 2 12h8z"
+                />
+              </svg>
             </div>
             <div>
-              <h4>
-                Un mentor <br />
-                pour vous accompagner
-              </h4>
+              <h4>Leadership Féminin</h4>
               <p>
-                Bénéficiez des conseils d'un expert du métier qui vous aide à
-                progresser tout au long de votre formation.
+                Les femmes prennent des rôles de leadership, inspirant et
+                guidant les générations futures.
               </p>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <div>
-              <img
-                class="rounded-cricle"
-                src="https://openclassrooms.com/modules/sdzv4-main/latest/images/job_ready-7cd674ffd711044da492.svg"
-                alt=""
-              />
+              <svg
+                class="rounded-circle"
+                width="100"
+                height="100"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-heart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15s-1.319-.635-2.5-1.75C4.319 12.135 2 10.5 2 7.5S4.5 3 8 3s6 2.5 6 4.5-2.319 4.635-3.5 5.75C9.319 14.365 8 15 8 15z"
+                />
+              </svg>
             </div>
             <div>
-              <h4>
-                Travaillez sur <br />
-                des projets professionnalisants
-              </h4>
+              <h4>Santé et Bien-être</h4>
               <p>
-                Réalisez des projets concrets, issus de scénarios métiers,
-                directement applicables dans le monde du travail.
+                Les femmes luttent pour un accès équitable aux soins de santé et
+                pour leur bien-être général.
               </p>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <div>
-              <img
-                class="rounded-cricle"
-                src="https://openclassrooms.com/modules/sdzv4-main/latest/images/job_ready-7cd674ffd711044da492.svg"
-                alt=""
-              />
+              <svg
+                class="rounded-circle"
+                width="100"
+                height="100"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-shield"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.072 1.5a.5.5 0 0 1 .5-.5h4.856a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-.5.5h-.5v.5a.5.5 0 0 1-.5.5H5.572a.5.5 0 0 1-.5-.5v-.5h-.5a.5.5 0 0 1-.5-.5V2.5a.5.5 0 0 1 .5-.5h.5v-.5zM5.5 2v.5h5V2h-5zM5 4v.5h6V4H5z"
+                />
+              </svg>
             </div>
             <div>
-              <h4>
-                Travaillez sur <br />
-                des projets professionnalisants
-              </h4>
+              <h4>Droits et Libertés</h4>
               <p>
-                Réalisez des projets concrets, issus de scénarios métiers,
-                directement applicables dans le monde du travail.
+                Les femmes défendent leurs droits et libertés, combattant les
+                injustices et les discriminations.
               </p>
             </div>
           </div>
@@ -338,140 +398,91 @@
     </section>
 
     <!-- Section inspiration -->
-    <section>
+    <section class="inspiration-section py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 gy-5 gy-md-5">
-            <blockquote>
-              "Une femme forte n'est pas celle qui écrase les autres pour
-              avancer, mais celle qui inspire, élève et ouvre la voie pour
-              celles qui viendront après elle."
-              <br />
-              <cite>- Henriette Dagri Diabaté</cite>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
+            <img
+              src="https://th.bing.com/th/id/OIP.ULiE5FlnPW1cVQZmE-4taAHaE7?w=268&h=180&c=7&r=0&o=5&pid=1.7"
+              alt="Henriette Dagri Diabaté"
+              class="rounded-circle img-fluid mb-3"
+              style="width: 200px; height: 200px; object-fit: cover"
+            />
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                "Une femme forte n'est pas celle qui écrase les autres pour
+                avancer, mais celle qui inspire, élève et ouvre la voie pour
+                celles qui viendront après elle."
+              </p>
+              <footer class="blockquote-footer mt-2">
+                <cite>- Henriette Dagri Diabaté</cite>
+              </footer>
             </blockquote>
             <div>
-              <a href="" class="btn btn-primary">Voir son parcours</a>
+              <a href="#" class="btn btn-primary mt-3">Voir son parcours</a>
             </div>
-          </div>
-          <div
-            class="col-12 col-sm-12 col-md-6 col-lg-6 text-md-end text-center"
-          >
-            <img
-              src="data:image/jpeg;base64,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"
-              alt=""
-              class="img-fluid"
-            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Section Statistiques -->
-    <section class="stats-section text-center py-5">
+    <section class="stats-section text-center py-5 bg-light">
       <div class="container">
-        <h3 class="text-center fw-bold">Ne vous laisser pas intimider</h3>
-        <blockquote class="mb-5">
-          « Ne laisse personne te faire sentir inférieur sans ton consentement.
-          »
+        <h3 class="text-center fw-bold special-color">Ne vous laissez pas intimider</h3>
+        <blockquote class="mb-5 special-color">
+          « Ne laisse personne te faire sentir inférieur sans ton consentement. »
           <br />
           <cite>— Eleanor Roosevelt </cite>
         </blockquote>
         <div class="row">
-          <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
-          >
+          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
-                <circle
-                  class="progress-ring__background"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
-                <circle
-                  class="progress-ring__circle"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
+                <circle class="progress-ring__background" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-ring__circle" cx="50" cy="50" r="40"></circle>
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
 
           <!-- Autres colonnes sont identiques -->
-          <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
-          >
+          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
-                <circle
-                  class="progress-ring__background"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
-                <circle
-                  class="progress-ring__circle"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
+                <circle class="progress-ring__background" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-ring__circle" cx="50" cy="50" r="40"></circle>
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
-          <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
-          >
+          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
-                <circle
-                  class="progress-ring__background"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
-                <circle
-                  class="progress-ring__circle"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
+                <circle class="progress-ring__background" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-ring__circle" cx="50" cy="50" r="40"></circle>
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
-          <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
-          >
+          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
-                <circle
-                  class="progress-ring__background"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
-                <circle
-                  class="progress-ring__circle"
-                  cx="50"
-                  cy="50"
-                  r="40"
-                ></circle>
+                <circle class="progress-ring__background" cx="50" cy="50" r="40"></circle>
+                <circle class="progress-ring__circle" cx="50" cy="50" r="40"></circle>
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
@@ -594,11 +605,24 @@
               Un site dédié aux femmes inspirantes qui ont changé le monde.
               Découvrez leurs histoires et trouvez l'inspiration.
             </p>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #007bff; height: 2px"
+            />
+            <p>
+              Un site dédié aux femmes inspirantes qui ont changé le monde.
+              Découvrez leurs histoires et trouvez l'inspiration.
+            </p>
           </div>
+
 
           <!-- Liens rapides -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h5 class="text-uppercase fw-bold">Liens rapides</h5>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #007bff; height: 2px"
+            />
             <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #007bff; height: 2px"
@@ -620,6 +644,7 @@
               </li>
             </ul>
           </div>
+
 
           <!-- Réseaux sociaux -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -643,9 +668,14 @@
             ></a>
           </div>
 
+
           <!-- Contact -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <h5 class="text-uppercase fw-bold">Contact</h5>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #007bff; height: 2px"
+            />
             <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #007bff; height: 2px"
@@ -657,18 +687,19 @@
         </div>
       </div>
 
+
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2025 Tous droits réservés |
         <a class="text-white text-decoration-none" href="#">E2C MAG</a>
       </div>
     </footer>
-    
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
