@@ -2,9 +2,8 @@ const userConnected = document.getElementById('userConnected');
 const createAccount = document.getElementById('createAccount');
 const userLogout = document.getElementById('logout');
 const connectionBtn = document.getElementById('connectionBtn');
-updateUI();
 
-function updateUI() {
+export function updateUI() {
     let isConnected = localStorage.getItem('connect') === "true"; // ✅ Converti en booléen
     const userName = localStorage.getItem('name') || "Utilisateur";
     
@@ -60,4 +59,7 @@ function logout(email) {
         console.error("Erreur de déconnexion :", error);
     });
 }
+// ✅ Code de déconnexion fonctionnel
+
+export default updateUI; // ✅ Exporte la fonction pour les tests
 // ✅ Code de déconnexion fonctionnel

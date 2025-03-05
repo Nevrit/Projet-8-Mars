@@ -30,12 +30,7 @@
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img
-              src="../images/IMAGE/LOGO/logo_avif_01.png"
-              alt="logo AVIF"
-              width="50"
-              height="50"
-            />
+            <img src="" alt="logo AVIF" width="50" height="50" />
           </a>
           <button
             class="navbar-toggler"
@@ -75,8 +70,30 @@
                 <i class="bi bi-person-circle"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Créer mon compte</a></li>
-                <li><a class="dropdown-item" href="#">Se connecter</a></li>
+                <li>
+                  <a
+                    id="createAccount"
+                    class="dropdown-item"
+                    href="inscription.html"
+                    >Créer mon compte</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    id="connectionBtn"
+                    href="connection.html"
+                    >Se connecter</a
+                  >
+                </li>
+                <li>
+                  <a id="userConnected" class="dropdown-item" href="#"></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" type="button" id="logout" href="#"
+                    >Déconnexion</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -388,5 +405,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="education.js"></script>
   </body>
 </html>

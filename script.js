@@ -1,4 +1,9 @@
+import { updateUI } from './abus.js'; // ✅ Importe la fonction updateUI
+
 document.addEventListener("DOMContentLoaded", function () {
+
+    window.onload = updateUI; // ✅ Assure que l'UI est mise à jour au chargement
+
     const submitBtn = document.getElementById('submitBtn');
 
     // Vérifie si on est sur la page où submitBtn existe (connection.html)
