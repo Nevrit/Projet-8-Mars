@@ -206,3 +206,24 @@ blockquote {
     transform: scale(1.05); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
+
+/* Inspiration */
+.section-inspi {
+
+}
+.section-inspi h3 span {
+    display: block;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: var(--bs-primary);
+}
+
+.section-inspi-indic {
+    font-family: "Avigea", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .section-inspi .text-end {
+        text-align: unset !important;
+    }
+}
