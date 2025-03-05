@@ -86,8 +86,20 @@
                 <i class="bi bi-person-circle"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Créer mon compte</a></li>
-                <li><a class="dropdown-item" href="#">Se connecter</a></li>
+                <li>
+                  <a
+                  id="createAccount"
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    >Créer mon compte</a
+                  >
+                </li>
+                <li><a class="dropdown-item" id="connectionBtn" href="connection.html">Se connecter</a></li>
+                <li><a id="userConnected" class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" type="button" id="logout" href="#">Déconnexion</a></li>
+
               </ul>
             </div>
           </div>

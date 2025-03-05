@@ -1,26 +1,44 @@
 const userConnected = document.getElementById('userConnected');
-const isConnected = localStorage.getItem('connect');
-const userName = localStorage.getItem('name');
-const userEmail = localStorage.getItem('email');
 const createAccount = document.getElementById('createAccount');
 const userLogout = document.getElementById('logout');
 const connectionBtn = document.getElementById('connectionBtn');
+updateUI();
 
-if (isConnected === "true") {
-    connectionBtn.style.display = "none";
-    userLogout.style.display = "block";
-    userConnected.innerHTML = userName;
-    createAccount.innerHTML = "";
+function updateUI() {
+    let isConnected = localStorage.getItem('connect') === "true"; // ✅ Converti en booléen
+    const userName = localStorage.getItem('name') || "Utilisateur";
+    
+
+    if (isConnected) {
+        if (connectionBtn) connectionBtn.style.display = "none";
+        if (userLogout) userLogout.style.display = "block";
+        if (userConnected) userConnected.innerHTML = userName;
+        if (createAccount) createAccount.innerHTML = "";
+    } else {
+        if (connectionBtn) connectionBtn.style.display = "block";
+        if (userLogout) userLogout.style.display = "none";
+        if (userConnected) userConnected.innerHTML = "";
+        if (createAccount) createAccount.innerHTML = "Créer un compte";
+    }
+    console.log("isConnected :", isConnected);
+    
 }
 
-userLogout.addEventListener('click', function() {
-    logout(userEmail);
-});
+window.onload = updateUI; // ✅ Assure que l'UI est mise à jour au chargement
+
+if (userLogout) {
+    userLogout.addEventListener('click', function(event) {
+        event.defaultPrevented;
+        const userEmail = localStorage.getItem('email');
+        if (userEmail) {
+            logout(userEmail);
+        }
+    });
+}
 
 function logout(email) {
-    const userData = {
-        'email': email
-    };
+    const userData = { 'email': email };
+
     fetch("http://localhost:5000/api/users/logout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -28,19 +46,18 @@ function logout(email) {
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Réponse de l'API logout :", data); // ✅ Vérifie la réponse
+        alert("Réponse de l'API logout :", data)
         if (data.error) {
-            alert(data.error); // Affiche l'erreur si mot de passe incorrect
+            console.error("Erreur de déconnexion :", data.error);
         } else {
-            alert('Bonsoir');
-            localStorage.setItem("connect", data.user.connected.toString()); // ✅ Convertir en chaîne
-            console.log("Valeur stockée dans localStorage:", localStorage.getItem("connect")); // ✅ Debugging
-            window.location.href = "index.html"; // Redirection vers une autre page
+            alert("Réponse de l'API logout :", data)
+            localStorage.setItem("connect", data.user.isConnected); // ✅ Force la conversion en chaîne
+            window.location.href = "index.html"; // ✅ La redirection rechargera la page, donc pas besoin de updateUI()
         }
     })
     .catch(error => {
-        console.error("Erreur :", error);
+        console.error("Erreur de déconnexion :", error);
     });
-    alert('Gesteur')
 }
-
-console.log(isConnected);
+// ✅ Code de déconnexion fonctionnel
