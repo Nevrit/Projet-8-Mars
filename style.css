@@ -170,3 +170,6 @@ blockquote {
     background-color: #D77B09;
     padding: 50px;
 }
+#logout{
+    display: none;
+}
