@@ -1,0 +1,55 @@
+/* customise-bootstrap.css */
+
+/* Primary color */
+:root {
+    --bs-primary: #60241E;
+    --bs-primary-rgb: 96, 36, 30;
+    --bs-secondary: #FFF7C5;
+    --bs-secondary-rgb: 255, 247, 197;
+    --bs-success: #1abc9c;
+    --bs-info: #3498db;
+    --bs-warning: #f1c40f;
+    --bs-danger: #e74c3c;
+    --bs-light: #ecf0f1;
+    --bs-dark: #2c3e50;
+}
+
+/* Example of overriding Bootstrap button styles */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    --bs-btn-active-color: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-secondary);
+    --bs-btn-active-border-color: var(--bs-secondary);
+    &:hover {
+        background-color: var(--bs-secondary);
+        border-color: var(--bs-secondary);
+        color: var(--bs-primary);
+    }
+
+    &:disabled {
+        background-color: var(--bs-light);
+        border-color: var(--bs-light);
+        color: var(--bs-primary);
+    }
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+/* Add more customizations as needed */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Avigea', sans-serif;
+}
+
+.nav-link {
+    --bs-nav-link-color: var(--bs-secondary);
+    color: var(--bs-nav-link-color);
+    font-weight: normal;
+    &.active {
+        --bs-navbar-active-color: var(--bs-secondary);
+        font-weight: bold;
+    }
+}
