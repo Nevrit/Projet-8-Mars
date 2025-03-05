@@ -1,34 +1,60 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const submitInscription = document.getElementById("submitInscription");
-  if (submitInscription) {
-    submitInscription.addEventListener("click", getValueOnForm);
-  } else {
-    console.error("Le bouton d'inscription n'a pas été trouvé !");
-  }
-});
+const submitInscription = document.getElementById("submitInscription");
+const errorMessage = document.getElementById("errorMessage");
 
-async function getValueOnForm(event) {
+if (!submitInscription) {
+  console.error("Bouton de soumission introuvable !");
+}
+
+submitInscription.addEventListener("click", async function (event) {
+  console.log("Bouton cliqué");
   event.preventDefault();
 
+  // Récupération des valeurs
   const nom = document.getElementById("nom").value;
   const prenom = document.getElementById("prenom").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
 
+  // Logs de débogage
+  console.log("Valeurs récupérées:", {
+    nom,
+    prenom,
+    email,
+    passwordLength: password.length,
+    confirmPasswordLength: confirmPassword.length,
+  });
+
+  // Vérifications initiales
   if (password !== confirmPassword) {
-    showError("Les mots de passe ne correspondent pas.");
+    console.error("Mots de passe non concordants");
+    errorMessage.innerHTML = "Les mots de passe ne correspondent pas.";
     return;
   }
 
-  if (!await checkUser(email)) {
-    await inscription(nom, email, password);
+  try {
+    // Vérifier d'abord si l'utilisateur existe
+    const userExists = await checkUser(email);
+    console.log(userExists);
+
+    if (!userExists) {
+      // Si l'utilisateur n'existe pas, procéder à l'inscription
+      await inscription(nom, email, confirmPassword);
+    }
+    errorMessage.innerHTML = "L'utilisateur existe déjà.";
+  } catch (error) {
+    console.error("Erreur lors de l'inscription:", error);
+    errorMessage.innerHTML = "Une erreur est survenue. Veuillez réessayer.";
   }
-}
+});
 
 async function inscription(nom, email, password) {
-  const user = { nom, email, password };
-
+  console.log("Tentative d'inscription");
+  const user = {
+     "name" : nom, 
+     "email" : email, 
+     "password" : password 
+    };
   try {
     const response = await fetch("http://localhost:5000/api/users", {
       method: "POST",
@@ -36,17 +62,23 @@ async function inscription(nom, email, password) {
       body: JSON.stringify(user),
     });
 
+    console.log("Réponse du serveur:", response.status);
+    const data = await response.json();
+
     if (response.ok) {
       alert("Inscription réussie !");
+      localStorage.setItem("email", data.email);
+      localStorage.setItem("connect", true);
+      localStorage.setItem("name", nom);
       window.location = "abus.html";
-      return; // Stopper l'exécution après la redirection
     } else {
-      const errorData = await response.json();
-      showError(`Erreur : ${errorData.error}`);
+      console.error("Erreur d'inscription:", data.error);
+      errorMessage.innerHTML = data.error;
     }
   } catch (error) {
-    console.error("Erreur lors de l'inscription :", error);
-    showError("Erreur lors de l'inscription. Veuillez réessayer plus tard.");
+    console.error("Erreur de fetch:", error);
+    errorMessage.innerHTML =
+      "Erreur lors de l'inscription. Veuillez réessayer plus tard.";
   }
 }
 
@@ -58,26 +90,20 @@ async function checkUser(email) {
       body: JSON.stringify({ email }),
     });
 
+    const data = await response.json();
+
     if (response.ok) {
-      return true;
+      // La réponse est ok, on vérifie le champ exists
+      console.log("Données de vérification:", data);
+      return data.exists;
     } else {
-      const errorData = await response.json();
-      showError(`Erreur : ${errorData.error}`);
-      return false;
+      // Gestion des erreurs
+      alert("Erreur de vérification:", data.error);
+      errorMessage.innerHTML = data.error || "Erreur de vérification";
+      return data.exists;
     }
   } catch (error) {
-    console.error("Erreur lors de la vérification de l'utilisateur :", error);
-    showError("Erreur lors de la vérification de l'utilisateur.");
-    return false;
-  }
-}
-
-function showError(message) {
-  const errorMsg = document.getElementById("errorMessage");
-  if (errorMsg) {
-    errorMsg.textContent = message;
-    errorMsg.style.color = "red";
-  } else {
-    alert(message);
+    alert("Erreur de fetch:", error);
+    errorMessage.innerHTML = "Erreur lors de la vérification de l'utilisateur.";
   }
 }
