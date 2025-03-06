@@ -14,10 +14,11 @@ nav,
 }
 
 .jumbotron-abus {
-    background-image: url(image/justice_statue.jpg);
+    background-image: url(images/femmePleure.png);
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 section {
