@@ -4,19 +4,22 @@
     font-style: normal;
 }
 
-nav, .nav-item>a{
+nav,
+.nav-item>a {
     color: white;
 }
 
 .jumbotron {
     background-color: #fffaee;
 }
-.jumbotron-abus{
+
+.jumbotron-abus {
     background-image: url(image/justice_statue.jpg);
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 section {
     margin-top: 70px;
 }
@@ -29,9 +32,6 @@ section {
     background-color: #ebeefb !important;
 }
 
-.btn {
-    /* background-color: #7451eb !important; */
-}
 
 h4 {
     padding: 20px;
@@ -153,10 +153,10 @@ blockquote {
 }
 
 .form-container {
-    margin: 0px; 
+    margin: 0px;
     padding: 30px;
     background-color: #fff7c5;
-    color : #60241e;
+    color: #60241e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -173,44 +173,46 @@ blockquote {
 .form-container .btn {
     border-radius: 5px;
 }
-.sensibilisation-section{
-    background-color: #D77B09;
+
+.sensibilisation-section {
+    background-color: #fff7c5;
+    color: #60241e;
     padding: 50px;
 }
-#logout{
+
+#logout {
     display: none;
 }
 
-.bg-dark{
+.bg-dark {
     background-color: #60241e !important;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #60241e !important;
     color: #fff7c5 !important;
     font-weight: bold;
 }
 
-.bg-light, .btn-dropwdown-toogle {
-    background-color: #60241e !important; /*A revoir*/
+.bg-light,
+.btn-dropwdown-toogle {
+    background-color: #60241e !important;
+    /*A revoir*/
 }
-.special-color{
+
+.special-color {
     color: white;
 }
 
 .card-img-top {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .card:hover .card-img-top {
-    transform: scale(1.05); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-
-/* Inspiration */
-.section-inspi {
-
 }
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .section-inspi h3 span {
     display: block;
     font-weight: bold;
@@ -226,4 +228,8 @@ blockquote {
     .section-inspi .text-end {
         text-align: unset !important;
     }
+}
+
+.fas {
+    color: #60241e !important;
 }
