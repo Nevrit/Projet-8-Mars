@@ -30,6 +30,13 @@
     <link rel="stylesheet" href="./theme.css" />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- AnimeJS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <title>E2C MAG</title>
     <link rel="shortcut icon" href="./images/favicon-32x32.png" />
   </head>
@@ -208,7 +215,7 @@
     </div>
 
     <!-- Section talk about our different links -->
-    <section class="mt-0">
+    <section class="mt-0" data-aos="fade-up">
       <div class="container">
         <div class="row gy-5">
           <div class="col-sm-6">
@@ -296,7 +303,7 @@
       </div>
     </section>
 
-    <section class="learning-section">
+    <section class="learning-section" data-aos="zoom-in">
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="savoir-faire">La Résilience des Femmes</h2>
@@ -407,7 +414,7 @@
     </section>
 
     <!-- Section inspiration -->
-    <section class="inspiration-section py-5">
+    <section class="inspiration-section py-5" data-aos="fade-up">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center">
@@ -436,7 +443,7 @@
     </section>
 
     <!-- Section Statistiques -->
-    <section class="stats-section text-center py-5 bg-light">
+    <section class="stats-section text-center py-5 bg-light" data-aos="fade-up>
       <div class="container">
         <h3 class="text-center fw-bold special-color">
           Ne vous laissez pas intimider
@@ -555,7 +562,7 @@
       <div class="container">
         <div class="row">
           <!-- Colonne pour le formulaire -->
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-up">
             <form>
               <div class="row">
                 <div class="col-md-6">
@@ -632,7 +639,7 @@
 
           <!-- Colonne pour le texte à droite -->
           <div
-            class="col-md-6 gy-5 d-flex justify-content-center align-items-center"
+            class="col-md-6 gy-5 d-flex justify-content-center align-items-center" data-aos="fade-left"
           >
             <div class="text-center">
               <h3 class="fw-bold">Dénoncer les injustices</h3>
@@ -649,7 +656,7 @@
       </div>
     </section>
 
-    <footer class="bg-primary text-secondary pt-5 pb-4">
+    <footer class="bg-primary text-secondary pt-5 pb-4" data-aos="fade-up">
       <div class="container text-center text-md-start">
         <div class="row">
           <!-- À propos -->
@@ -769,5 +776,12 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="script.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Durée de l'animation (en millisecondes)
+        offset: 200, // Décalage avant que l'animation ne démarre
+        easing: "ease-in-out", // Type de courbe d'animation
+      });
+    </script>
   </body>
 </html>
