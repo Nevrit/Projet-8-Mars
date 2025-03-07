@@ -28,6 +28,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./theme.css">
   </head>
   <body>
@@ -83,8 +84,30 @@
                 <i class="bi bi-person-circle"></i>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Créer mon compte</a></li>
-                <li><a class="dropdown-item" href="#">Se connecter</a></li>
+                <li>
+                  <a
+                    id="createAccount"
+                    class="dropdown-item"
+                    href="inscription.html"
+                    >Créer mon compte</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    id="connectionBtn"
+                    href="connection.html"
+                    >Se connecter</a
+                  >
+                </li>
+                <li>
+                  <a id="userConnected" class="dropdown-item" href="#"></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" type="button" id="logout" href="#"
+                    >Déconnexion</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -92,19 +115,11 @@
       </nav>
     </header>
 
-    <section class="mt-0" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/background.jpg'); background-position: center;">
+    <section class="mt-0" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/background.jpg'); background-position: center; background-size: cover;">
       <div class="introduction container py-3 py-md-5">
-        <!-- <div class="container"> -->
-        <!-- <h2>
-          L'Ecole de la deuxième chance (E2C)
-        </h2> -->
-        <!-- <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla labore, neque recusandae veritatis sunt fuga quis reprehenderit repellat veniam ipsam, aliquam maxime eum at corrupti, provident voluptas iure repellendus. Beatae.
-        </p>
-        </div> -->
         <div class="intro ">
           <div class="case-1 gauche text-light">
-            <p> Dans un monde en constante évolution, où le numérique façonne les opportunités d’apprentissage et d’emploi, l’École de la Deuxième Chance (E2C) se positionne comme une réponse concrète aux défis de la formation et de l’insertion des jeunes en difficulté notamment les jeunes filles. Portée par le Ministère de l’Enseignement Technique, de la Formation Professionnelle et de l’Apprentissage, cette initiative novatrice s’appuie sur le projet TIC E2C, qui met les Technologies de l’Information et de la Communication (TIC) au service d’un parcours éducatif repensé.</p>
+            <p> Dans un monde en constante évolution, où le numérique façonne les opportunités d’apprentissage et d’emploi, l’École de la Deuxième Chance (E2C) se positionne comme une réponse concrète aux défis de la formation et de l’insertion des jeunes en difficulté notamment les jeunes filles. <br> <br> Portée par le Ministère de l’Enseignement Technique, de la Formation Professionnelle et de l’Apprentissage, cette initiative novatrice s’appuie sur le projet TIC E2C, qui met les Technologies de l’Information et de la Communication (TIC) au service d’un parcours éducatif repensé.</p>
           </div>
           <h1 class="case-1 droite text-light display-3">
             E2C : Ecole de la 2ème chance
@@ -113,16 +128,159 @@
       </div>
     </section>
 
-    <section class="mt-4">
-      <div class="container">
-        <h3>
-          Les différents parcours et débouchés
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla labore, neque recusandae veritatis sunt fuga quis reprehenderit repellat veniam ipsam, aliquam maxime eum at corrupti, provident voluptas iure repellendus. Beatae.
-        </p>
+    <section class="parcours-debouches mt-4 container-lg">
+      <div class="">
+          <h3>Les différents parcours et débouchés</h3>
       </div>
-    </section>
+          <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="accordion-icons">
+                          <i class='bx bx-code-alt'></i>&nbsp;
+                        </div>
+                          Developpeur d'application
+                      </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                      Le <strong>developpeur d'application</strong> est un professionnel de l'informatique specialisé dans la conception, de developpement et la maintenance d'applications.
+                      <ul class="debouchés">
+                        <li>Analyste developpeur</li>
+                        <li>Concepteur d'application web et web mobile</li>
+                        <li>Programmeur informatique</li>
+                      </ul>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div class="accordion-icons">
+                          <i class='bx bxl-meta'></i>&nbsp;
+                        </div>
+                          Community manager
+                      </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                         Un <strong>Community manager (CM)</strong> se charge de gérer et d'animer la présence en ligne d'une entreprise, d'une marque ou d'une personnalité sur les réseau sociaux et autres plateformes communautaires.
+                         <ul class="debouchés">
+                          <li>Social media manager</li>
+                          <li>Responsable communication web</li>
+                          <li>Chef de projet digital</li>
+                         </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <div class="accordion-icons">
+                          <i class='bx bx-slideshow' ></i>&nbsp;
+                        </div>
+                          Perfectionnement Bureautique
+                      </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Le <strong>Perfectionnement Bureautique</strong> designe l'ensemble des formations pratiques visant à améliorer ses compétences dans l'utilisation des outils Bureautique
+                         <ul class="debouchés">
+                          <li>Assistant Administratif</li>
+                          <li>Receptionniste</li>
+                          <li>Opérateur de saisie</li>
+                          
+                         </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <div class="accordion-icons">
+                         <i class='bx bxs-data'></i>&nbsp;
+                         
+                        </div>
+                          Data Analyst
+                      </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Le <strong>data Analyst</strong> crée les bases de données nécessaires a l'entrenprise puis s'assure de leurs bon fonctionnement.
+                        <ul class="debouchés">
+                          <li>Data scientist</li>
+                          <li>Ingenieur data</li>
+                          <li>Ingenieur business intelligence</li>
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <div class="accordion-icons">
+                          <i class='bx bx-palette' >  </i>&nbsp;
+                        </div>
+                          Infographie
+                      </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          Un <strong>infographe</strong> est un professionnel créatif et visuel spécialisé dans la conception graphique. En voici quelques débouchés:
+                          <ul class="debouchés">
+                            <li>Graphiste</li>
+                            <li>Chef de projet créatif</li>
+                            <li>Concepteur web</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <div class="accordion-icons">
+                          <i class='bx bx-shield-minus'></i>&nbsp;
+                        </div>
+                          Cyber Security
+                      </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                          La <strong>cyber sécurité </strong>vise à assurer la confidentialité, l'intrégrité et la disponibilité des informations. Ses débouchés sont:
+                          <ul class="debouchés">
+                            <li>Analyste en cyber sécurité</li>
+                            <li>Ingénieur en sécurité informatique</li>
+                            <li>Consultant en Cyber sécurité</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <div class="accordion-icons">
+                          <i class='bx bx-code' ></i>&nbsp;
+                        </div>
+                          Webmaster
+                      </button>
+                  </h2>
+                  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                 le <strong>webmaster</strong> est un professionnel chargé de la création, de la gestion et de la maintenance des sites internet. Quelques débouchés :
+                 <ul class="debouchés">
+                  <li>Développeur web</li>
+                  <li>Administrateur de site web</li>
+                  <li>Intégrateur web</li>
+                </ul>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
     <section class="mt-4" >
       <div class="container">
@@ -270,5 +428,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="education.js"></script>
   </body>
 </html>

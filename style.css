@@ -4,6 +4,10 @@
     font-style: normal;
 }
 
+nav, .nav-item>a{
+    color: white;
+}
+
 .jumbotron {
     background-color: #fffaee;
 }
@@ -87,7 +91,8 @@ p {
 }
 
 .learning-section {
-    background-color: #D77B09;
+    background-color: #fff7c5;
+    color: #60241e;
     padding: 50px;
 }
 
@@ -113,6 +118,7 @@ blockquote {
     font-size: 1.2em;
     font-weight: 900 !important;
     font-style: italic !important;
+    color: white;
 }
 
 .progress-ring {
@@ -133,7 +139,7 @@ blockquote {
 }
 
 .progress-ring__circle {
-    stroke: #7451eb;
+    stroke: #D77B09;
     stroke-dasharray: 251.2;
     stroke-dashoffset: calc(251.2 - (75 * 251.2) / 100);
     transition: stroke-dashoffset 0.5s;
@@ -149,7 +155,8 @@ blockquote {
 .form-container {
     margin: 0px; 
     padding: 30px;
-    background-color: #f2e93f;
+    background-color: #fff7c5;
+    color : #60241e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -174,6 +181,23 @@ blockquote {
     display: none;
 }
 
+.bg-dark{
+    background-color: #60241e !important;
+}
+
+.btn-primary{
+    background-color: #60241e !important;
+    color: #fff7c5 !important;
+    font-weight: bold;
+}
+
+.bg-light, .btn-dropwdown-toogle {
+    background-color: #60241e !important; /*A revoir*/
+}
+.special-color{
+    color: white;
+}
+
 .card-img-top {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
@@ -182,4 +206,24 @@ blockquote {
     transform: scale(1.05); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
-  
+
+/* Inspiration */
+.section-inspi {
+
+}
+.section-inspi h3 span {
+    display: block;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: var(--bs-primary);
+}
+
+.section-inspi-indic {
+    font-family: "Avigea", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .section-inspi .text-end {
+        text-align: unset !important;
+    }
+}
