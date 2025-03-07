@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     localStorage.setItem("connect", data.user.connected ? "true" : "false");  // ✅ Forcer en string
                     console.log("Valeur stockée dans localStorage:", localStorage.getItem("isConnected")); // ✅ Debugging
                     alert(`Connexion réussie !`);
-                    window.location.href = "abus.html"; // Redirection vers une autre page
+                    window.location.href = "courses.html"; // Redirection vers une autre page
                 }
             })
             .catch(error => {

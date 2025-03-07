@@ -234,3 +234,6 @@ blockquote {
 .fas {
     color: #60241e !important;
 }
+#coursesLink{
+    display: none;
+}
