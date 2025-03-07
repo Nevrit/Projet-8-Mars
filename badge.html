@@ -99,9 +99,21 @@
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        //FORMULAIRE ICI
+    <section class="container">
+      <div class="row">
+        <form class="col-12 col-md" name="badgeForm">
+          <label for="badgePrenom" class="form-label">Prénom</label>
+          <input type="text" id="badgePrenom" name="badgePrenom" class="form-control">
+          <label for="badgeRole" class="form-label">Role</label>
+          <input type="text" id="badgeRole" name="badgeRole" class="form-control">
+          <label for="badgePhoto" class="form-label">Photo</label>
+          <input type="file" name="badgePhoto" id="badgePhoto" class="form-control">
+          <input type="submit" value="Envoyer">
+        </form>
+        <div class="col-12 col-md">
+          <canvas class="rounded" id="badge-example" style="height: 200px; width: 200px;"></canvas>
+          <a id="exportBtn" href="#">Download</a>
+        </div>
       </div>
     </section>
 
@@ -193,5 +205,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"
       ></script>
+      <script src="https://cdn.jsdelivr.net/npm/@guymaster/badge-js"></script>
+      <script src="badge.js"></script>
   </body>
 </html>
