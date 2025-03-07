@@ -10,18 +10,19 @@ function dessinerBadge(e){
         e.preventDefault();
     }
     badge.clear();
+    const mode = (form["badgeMode"].value)
     const rect = new BadgeRectLayer({
         height: 100,
         width: 100,
         top: 0,
         left: 0,
-        color: "#60241E"
+        color:(mode=="Clair")? "#60241E" :  "white"
     });
     badge.addLayer(rect);
     
     const nom = new BadgeTextLayer(form["badgePrenom"].value, "Avigea", {
         size: 10,
-        color: "white",
+        color: (mode=="Clair")? "white" : "#60241E",
         top: (h, w) => 5,
         left: (h, w) => 5
     });
@@ -29,7 +30,7 @@ function dessinerBadge(e){
     
     const role = new BadgeTextLayer(form["badgeRole"].value, "Montserrat", {
         size: 6,
-        color: "white",
+        color: (mode=="Clair")? "white" :  "#60241E",
         bottom: (h, w) => 5,
         right: (h, w) => 5
     });
@@ -43,14 +44,14 @@ function dessinerBadge(e){
     });
     badge.addLayer(img);
 
-    const logo = new BadgeImageLayer("images/8mars-logo-light.png", {
+    const logo = new BadgeImageLayer((mode=="Clair")? "images/8mars-logo-light.png" : "images/8mars-logo-dark.png", {
         width: 20,
         right: (h, w) => 5,
         top: (h, w) => 5
     });
     badge.addLayer(logo);
 }
-form.addEventListener("submit", dessinerBadge);
+form.addEventListener("input", dessinerBadge);
 dessinerBadge();
 
 

@@ -103,16 +103,20 @@
       <div class="row">
         <form class="col-12 col-md" name="badgeForm">
           <label for="badgePrenom" class="form-label">Prénom</label>
-          <input id="badgePrenom" name="badgePrenom" type="text" class="form-control">
+          <input id="badgePrenom" name="badgePrenom" type="text" class="form-control mb-3">
           <label for="badgeRole" class="form-label">Role</label>
-          <input id="badgeRole" name="badgeRole" type="text" class="form-control">
+          <input id="badgeRole" name="badgeRole" type="text" class="form-control mb-3">
           <label for="badgePhoto" class="form-label">Photo</label>
-          <input id="badgePhoto" name="badgePhoto" type="file" class="form-control">
-          <input type="submit">
+          <input id="badgePhoto" name="badgePhoto" type="file" class="form-control mb-3">
+          <select class="form-select mb-3" name="badgeMode" id="">
+            <option value="Clair">Clair</option>
+            <option value="Sombre">Sombre</option>
+          </select>
+          <a id="exportBtn" href="#" class="d-block btn-primary btn ">Download</a>
         </form>
         <div class="col-12 col-md">
           <canvas class="rounded" id="badge-example" style="width: 100%; aspect-ratio: 1;"></canvas>
-          <a id="exportBtn" href="#" class="d-block">Download</a>
+          
         </div>
       </div>
     </section>
