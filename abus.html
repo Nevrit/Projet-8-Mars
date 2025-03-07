@@ -537,7 +537,7 @@
         <div class="row">
           <!-- Colonne pour le formulaire -->
           <div class="col-md-6" data-aos="fade-up">
-            <form>
+            <form method="post" action="">
               <div class="row">
                 <div class="col-md-6">
                   <div class="mb-3">
@@ -570,7 +570,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="adresse"
+                  id="adress"
                   placeholder="Votre adresse"
                   required
                 />
@@ -580,14 +580,14 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="rue"
+                  id="street"
                   placeholder="Nom de la rue"
                   required
                 />
               </div>
               <div class="mb-3">
                 <label for="abus" class="form-label">Type d'abus</label>
-                <select class="form-select" id="abus" required>
+                <select class="form-select" id="abuseType" required>
                   <option value="">Sélectionner le type d'abus</option>
                   <option value="physique">Abus physique</option>
                   <option value="psychologique">Abus psychologique</option>
@@ -602,10 +602,9 @@
                   id="message"
                   rows="4"
                   placeholder="Détails de l'incident..."
-                  required
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary w-100">
+              <button type="button" id="validateDenouce" class="btn btn-primary w-100">
                 Envoyer
               </button>
             </form>
@@ -758,5 +757,6 @@
         easing: "ease-in-out", // Type de courbe d'animation
       });
     </script>
+    <script type="module" src="denounce.js"></script>
   </body>
 </html>
