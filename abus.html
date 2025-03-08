@@ -10,10 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Quando&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./fonts/avigea.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/avigea.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -28,14 +31,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./theme.css">
+    <link rel="stylesheet" href="./theme.css" />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- AOS Animations -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <title>Signalez un abus</title>
-    <link rel="shortcut icon" href="./images/favicon-32x32.png">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" />
   </head>
   <body>
-    <header style="position: sticky; top: 0; z-index: 1000;">
+    <header style="position: sticky; top: 0; z-index: 1000">
       <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container">
           <a class="navbar-brand" href="index.html">
@@ -59,8 +69,14 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto text-secondary">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html"
-                <a class="nav-link" aria-current="page" href="index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.html"
+                  <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.html"
                   >Accueil</a
                 >
               </li>
@@ -70,11 +86,14 @@
               <li class="nav-item">
                 <a class="nav-link" href="education.html">Education</a>
               </li>
+              <li class="nav-item" id="coursesLink">
+                <a class="nav-link" href="courses.html">Cours</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="badge.html">Mon badge</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="abus.html">Signalez un abus</a>
+                <a class="nav-link" href="abus.html">Signalez un abus</a>
               </li>
             </ul>
             <div class="dropdown">
@@ -89,17 +108,28 @@
               <ul class="dropdown-menu">
                 <li>
                   <a
-                  id="createAccount"
+                    id="createAccount"
                     class="dropdown-item"
                     href="inscription.html"
-                    
                     >Créer mon compte</a
                   >
                 </li>
-                <li><a class="dropdown-item" id="connectionBtn" href="connection.html">Se connecter</a></li>
-                <li><a id="userConnected" class="dropdown-item" href="#"></a></li>
-                <li><a class="dropdown-item" type="button" id="logout" href="#">Déconnexion</a></li>
-
+                <li>
+                  <a
+                    class="dropdown-item"
+                    id="connectionBtn"
+                    href="connection.html"
+                    >Se connecter</a
+                  >
+                </li>
+                <li>
+                  <a id="userConnected" class="dropdown-item" href="#"></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" type="button" id="logout" href="#"
+                    >Déconnexion</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -114,17 +144,22 @@
           <div class="col py-5">
             <h1 class="display-4">Signalez un abus</h1>
             <p class="lead">
-              This is a simple hero unit, a simple jumbotron-style component for
-              calling extra attention to featured content or information.
+              Si vous êtes témoin ou victime d'un abus, il est important de le
+              signaler. Nous sommes là pour vous aider et vous soutenir.
             </p>
             <hr class="my-4" />
             <p>
-              It uses utility classes for typography and spacing to space
-              content out within the larger container.
+              Utilisez notre plateforme pour signaler tout type d'abus en toute
+              confidentialité. Votre sécurité et votre bien-être sont notre
+              priorité.
             </p>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button"
-                >Apprendre +</a
+              <a
+                class="btn btn-primary btn-lg"
+                href="https://www.service-public.fr/particuliers/vosdroits/F1196"
+                role="button"
+                target="_blank"
+                >En savoir plus</a
               >
             </p>
           </div>
@@ -133,20 +168,23 @@
     </div>
 
     <!-- Section talk about our different links -->
-    <section class="mt-0">
+    <section class="mt-0" data-aos="fade-up">
       <div class="container">
         <div class="row gy-5">
           <div class="col-sm-6">
             <div class="card card-etudiant">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Étudiants</h5>
+                <h5 class="card-title fw-bold">Signaler un abus</h5>
                 <p class="card-text">
-                  Faites un grand pas vers votre nouvelle carrière en suivant
-                  l’une de nos formations diplômantes.
+                  Si vous êtes témoin ou victime d'un abus, utilisez notre
+                  plateforme pour le signaler en toute confidentialité.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.service-public.fr/particuliers/vosdroits/F1196"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Signaler un abus</a
                   >
                 </div>
               </div>
@@ -155,14 +193,17 @@
           <div class="col-sm-6">
             <div class="card card-employeurs">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Employeurs</h5>
+                <h5 class="card-title fw-bold">Obtenir de l'aide</h5>
                 <p class="card-text fw-light">
-                  Recrutez des alternants quand vous en avez besoin et formez
-                  vos équipes à des compétences opérationnelles.
+                  Trouvez des ressources et du soutien pour faire face aux abus
+                  et aux violences.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.service-public.fr/particuliers/vosdroits/N19808"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Obtenir de l'aide</a
                   >
                 </div>
               </div>
@@ -171,14 +212,17 @@
           <div class="col-sm-6">
             <div class="card card-employeurs">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Employeurs</h5>
+                <h5 class="card-title fw-bold">Connaître vos droits</h5>
                 <p class="card-text fw-light">
-                  Recrutez des alternants quand vous en avez besoin et formez
-                  vos équipes à des compétences opérationnelles.
+                  Informez-vous sur vos droits et les démarches à suivre en cas
+                  d'abus.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.service-public.fr/particuliers/vosdroits/N19808"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Connaître vos droits</a
                   >
                 </div>
               </div>
@@ -187,14 +231,17 @@
           <div class="col-sm-6">
             <div class="card card-etudiant">
               <div class="card-body">
-                <h5 class="card-title fw-bold">Étudiants</h5>
+                <h5 class="card-title fw-bold">Ressources pour les victimes</h5>
                 <p class="card-text">
-                  Faites un grand pas vers votre nouvelle carrière en suivant
-                  l’une de nos formations diplômantes.
+                  Accédez à des ressources et des services pour les victimes
+                  d'abus.
                 </p>
                 <div>
-                  <a href="#" class="btn btn-primary"
-                    >Démarrer mon inscription</a
+                  <a
+                    href="https://www.service-public.fr/particuliers/vosdroits/N19808"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Voir les ressources</a
                   >
                 </div>
               </div>
@@ -204,7 +251,7 @@
       </div>
     </section>
 
-    <section class="sensibilisation-section">
+    <section class="sensibilisation-section" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -247,13 +294,10 @@
     <section class="container my-5">
       <div class="row gy-5">
         <!-- Carte 1 : Inégalités économiques -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in">
           <div class="card shadow-sm p-3 text-center h-100">
             <div class="card-body">
-              <i
-                class="fa-solid fa-scale-unbalanced-flip fa-3x mb-2"
-                style="color: #e10505"
-              ></i>
+              <i class="fa-solid fa-scale-unbalanced-flip fa-3x mb-2"></i>
               <h5 class="card-title">Inégalités économiques</h5>
               <p class="card-text">
                 Écart salarial : Les femmes gagnent en moyenne moins que les
@@ -262,7 +306,7 @@
               <a
                 href="https://www.insee.fr/fr/statistiques/7766515"
                 target="_blank"
-                class="btn btn-danger"
+                class="btn btn-primary"
                 >En savoir plus</a
               >
             </div>
@@ -270,7 +314,7 @@
         </div>
 
         <!-- Carte 2 : Violences basées sur le genre -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-right">
           <div class="card shadow-sm p-3 text-center h-100">
             <div class="card-body">
               <i class="fas fa-hand-holding-heart fa-3x text-danger mb-3"></i>
@@ -283,7 +327,7 @@
               <a
                 href="https://www.who.int/fr/news-room/fact-sheets/detail/violence-against-women"
                 target="_blank"
-                class="btn btn-danger"
+                class="btn btn-primary"
                 >En savoir plus</a
               >
             </div>
@@ -291,7 +335,7 @@
         </div>
 
         <!-- Carte 3 : Agir pour le changement -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-right">
           <div class="card shadow-sm p-3 text-center h-100">
             <div class="card-body">
               <i class="fas fa-users fa-3x text-danger mb-3"></i>
@@ -303,20 +347,17 @@
               <a
                 href="http://archive.ipu.org/wmn-f/vaw/priorities.htm"
                 target="_blank"
-                class="btn btn-danger"
+                class="btn btn-primary"
                 >En savoir plus</a
               >
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in-right">
           <div class="card shadow-sm p-3 text-center h-100">
             <div class="card-body">
-              <i
-                class="fa-solid fa-scale-unbalanced-flip fa-3x mb-2"
-                style="color: #e10505"
-              ></i>
+              <i class="fa-solid fa-scale-unbalanced-flip fa-3x mb-2"></i>
               <h5 class="card-title">Inégalités économiques</h5>
               <p class="card-text">
                 Écart salarial : Les femmes gagnent en moyenne moins que les
@@ -325,7 +366,7 @@
               <a
                 href="https://www.insee.fr/fr/statistiques/7766515"
                 target="_blank"
-                class="btn btn-danger"
+                class="btn btn-primary"
                 >En savoir plus</a
               >
             </div>
@@ -333,7 +374,7 @@
         </div>
 
         <!-- Carte 2 : Violences basées sur le genre -->
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-3" data-aos="zoom-in-right">
           <div class="card shadow-sm p-3 text-center h-100">
             <div class="card-body">
               <i class="fas fa-hand-holding-heart fa-3x text-danger mb-3"></i>
@@ -346,7 +387,7 @@
               <a
                 href="https://www.who.int/fr/news-room/fact-sheets/detail/violence-against-women"
                 target="_blank"
-                class="btn btn-danger"
+                class="btn btn-primary"
                 >En savoir plus</a
               >
             </div>
@@ -354,7 +395,7 @@
         </div>
 
         <!-- Carte 3 : Agir pour le changement -->
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-3" data-aos="zoom-in-right">
           <div class="card shadow-sm p-3 text-center h-100">
             <div class="card-body">
               <i class="fas fa-users fa-3x text-danger mb-3"></i>
@@ -366,7 +407,7 @@
               <a
                 href="http://archive.ipu.org/wmn-f/vaw/priorities.htm"
                 target="_blank"
-                class="btn btn-danger"
+                class="btn btn-primary"
                 >En savoir plus</a
               >
             </div>
@@ -376,18 +417,23 @@
     </section>
 
     <!-- Section Statistiques -->
-    <section class="stats-section text-center py-5">
+    <section class="stats-section text-center py-5 bg-light">
       <div class="container">
-        <h3 class="text-center fw-bold">Ne vous laisser pas intimider</h3>
-        <blockquote class="mb-5">
-          « Ne laisse personne te faire sentir inférieur sans ton consentement.
-          »
-          <br />
-          <cite>— Eleanor Roosevelt </cite>
-        </blockquote>
-        <div class="row">
+        <div data-aos="zoom-out">
+          <h3 class="text-center fw-bold special-color">
+            Ne vous laissez pas intimider
+          </h3>
+          <blockquote class="mb-5 special-color">
+            « Ne laisse personne te faire sentir inférieur sans ton
+            consentement. »
+            <br />
+            <cite>— Eleanor Roosevelt </cite>
+          </blockquote>
+        </div>
+
+        <div class="row" data-aos="zoom-in">
           <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+            class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
           >
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
@@ -406,14 +452,14 @@
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
 
           <!-- Autres colonnes sont identiques -->
           <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+            class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
           >
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
@@ -432,12 +478,12 @@
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
           <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+            class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
           >
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
@@ -456,12 +502,12 @@
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
           <div
-            class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center"
+            class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
           >
             <div class="progress-container">
               <svg class="progress-ring" width="100" height="100">
@@ -480,7 +526,7 @@
               </svg>
               <span class="progress-text">75%</span>
             </div>
-            <div class="progress-container-paragraph">
+            <div class="progress-container-paragraph ms-3">
               <p>Femme battues</p>
             </div>
           </div>
@@ -493,8 +539,8 @@
       <div class="container">
         <div class="row">
           <!-- Colonne pour le formulaire -->
-          <div class="col-md-6">
-            <form>
+          <div class="col-md-6" data-aos="fade-up">
+            <form method="post" action="">
               <div class="row">
                 <div class="col-md-6">
                   <div class="mb-3">
@@ -527,7 +573,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="adresse"
+                  id="adress"
                   placeholder="Votre adresse"
                   required
                 />
@@ -537,14 +583,14 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="rue"
+                  id="street"
                   placeholder="Nom de la rue"
                   required
                 />
               </div>
               <div class="mb-3">
                 <label for="abus" class="form-label">Type d'abus</label>
-                <select class="form-select" id="abus" required>
+                <select class="form-select" id="abuseType" required>
                   <option value="">Sélectionner le type d'abus</option>
                   <option value="physique">Abus physique</option>
                   <option value="psychologique">Abus psychologique</option>
@@ -559,10 +605,9 @@
                   id="message"
                   rows="4"
                   placeholder="Détails de l'incident..."
-                  required
                 ></textarea>
               </div>
-              <button type="submit" onclick="" class="btn btn-primary w-100">
+              <button type="button" id="validateDenouce" class="btn btn-primary w-100">
                 Envoyer
               </button>
             </form>
@@ -571,6 +616,7 @@
           <!-- Colonne pour le texte à droite -->
           <div
             class="col-md-6 gy-5 d-flex justify-content-center align-items-center"
+            data-aos="fade-left"
           >
             <div class="text-center">
               <h3 class="fw-bold">Dénoncer les injustices</h3>
@@ -587,150 +633,6 @@
       </div>
     </section>
 
-    <footer class="bg-dark text-white pt-5 pb-4">
-      <div class="container text-center text-md-start">
-        <div class="row">
-          <!-- À propos -->
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-            <h5 class="text-uppercase fw-bold">À Propos</h5>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #007bff; height: 2px"
-            />
-            <p>
-              Un site dédié aux femmes inspirantes qui ont changé le monde.
-              Découvrez leurs histoires et trouvez l'inspiration.
-            </p>
-          </div>
-
-          <!-- Liens rapides -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h5 class="text-uppercase fw-bold">Liens rapides</h5>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #007bff; height: 2px"
-            />
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-white text-decoration-none">Accueil</a>
-              </li>
-              <li>
-                <a href="#" class="text-white text-decoration-none"
-                  >Inspirations</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-white text-decoration-none">Blog</a>
-              </li>
-              <li>
-                <a href="#" class="text-white text-decoration-none">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Réseaux sociaux -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h5 class="text-uppercase fw-bold">Suivez-nous</h5>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #007bff; height: 2px"
-            />
-            <br />
-            <a href="#" class="btn btn-outline-light btn-floating m-1"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="#" class="btn btn-outline-light btn-floating m-1"
-              ><i class="bi bi-twitter-x"></i
-            ></a>
-            <a href="#" class="btn btn-outline-light btn-floating m-1"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="#" class="btn btn-outline-light btn-floating m-1"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-          </div>
-
-          <!-- Contact -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h5 class="text-uppercase fw-bold">Contact</h5>
-            <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #007bff; height: 2px"
-            />
-            <p><i class="fas fa-home me-3"></i> Abidjan, Côte d'Ivoire</p>
-            <p><i class="fas fa-envelope me-3"></i> contact@site.com</p>
-            <p><i class="fas fa-phone me-3"></i> +225 07 07 07 07</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2025 Tous droits réservés |
-        <a class="text-white text-decoration-none" href="#">VotreSite.com</a>
-      </div>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Modal Connexion -->
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Inscription</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form action="" id="inscription">
-              <div class="row gy-2">
-                <div class="col-6">
-                  <label for="">Nom</label>
-                  <input type="text" id="firstName" />
-                </div>
-                <div class="col-6">
-                  <label for="">Prenom</label>
-                  <input type="text" id="lastName" />
-                </div>
-                <div class="col-6">
-                  <label for="">Email</label>
-                  <input type="email" id="email"/>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Annuler
-                </button>
-                <button type="submit" class="btn btn-primary">Valider</button>
-              </div>
-              <div class="mt-2 text-center">
-                <a href="">Vous avez déjà un compte ?</a>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <footer class="bg-primary text-secondary pt-5 pb-4">
       <div class="container text-center text-md-start">
         <div class="row">
@@ -745,6 +647,14 @@
               Un site dédié aux femmes inspirantes qui ont changé le monde.
               Découvrez leurs histoires et trouvez l'inspiration.
             </p>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #007bff; height: 2px"
+            />
+            <p>
+              Un site dédié aux femmes inspirantes qui ont changé le monde.
+              Découvrez leurs histoires et trouvez l'inspiration.
+            </p>
           </div>
 
           <!-- Liens rapides -->
@@ -754,12 +664,20 @@
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #007bff; height: 2px"
             />
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #007bff; height: 2px"
+            />
             <ul class="list-unstyled">
               <li>
-                <a href="#" class="text-secondary text-decoration-none">Accueil</a>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Accueil</a
+                >
               </li>
               <li>
-                <a href="#" class="text-secondary text-secondary text-decoration-none"
+                <a
+                  href="#"
+                  class="text-secondary text-secondary text-decoration-none"
                   >Inspirations</a
                 >
               </li>
@@ -767,7 +685,9 @@
                 <a href="#" class="text-secondary text-decoration-none">Blog</a>
               </li>
               <li>
-                <a href="#" class="text-secondary text-decoration-none">Contact</a>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Contact</a
+                >
               </li>
             </ul>
           </div>
@@ -780,16 +700,24 @@
               style="width: 60px; background-color: #007bff; height: 2px"
             />
             <br />
-            <a href="#" class="btn btn-outline-light text-secondary btn-floating m-1"
+            <a
+              href="#"
+              class="btn btn-outline-light text-secondary btn-floating m-1"
               ><i class="bi bi-facebook"></i
             ></a>
-            <a href="#" class="btn btn-outline-light text-secondary btn-floating m-1"
+            <a
+              href="#"
+              class="btn btn-outline-light text-secondary btn-floating m-1"
               ><i class="bi bi-twitter-x"></i
             ></a>
-            <a href="#" class="btn btn-outline-light text-secondary btn-floating m-1"
+            <a
+              href="#"
+              class="btn btn-outline-light text-secondary btn-floating m-1"
               ><i class="bi bi-instagram"></i
             ></a>
-            <a href="#" class="btn btn-outline-light text-secondary btn-floating m-1"
+            <a
+              href="#"
+              class="btn btn-outline-light text-secondary btn-floating m-1"
               ><i class="bi bi-linkedin"></i
             ></a>
           </div>
@@ -797,6 +725,10 @@
           <!-- Contact -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <h5 class="text-uppercase fw-bold">Contact</h5>
+            <hr
+              class="mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px; background-color: #007bff; height: 2px"
+            />
             <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #007bff; height: 2px"
@@ -814,6 +746,21 @@
         <a class="text-white text-decoration-none" href="#">E2C MAG</a>
       </div>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="abus.js" defer></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Durée de l'animation (en millisecondes)
+        offset: 200, // Décalage avant que l'animation ne démarre
+        easing: "ease-in-out", // Type de courbe d'animation
+      });
+    </script>
+    <script type="module" src="denounce.js"></script>
+    <script src="displayCourses.js"></script>
   </body>
 </html>
