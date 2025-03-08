@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const User = require('./models/Users');
 const Course = require('./models/Courses');
+const Denounce = require('./models/Denounce');
 const bcrypt = require('bcryptjs'); // Pour comparer les mots de passe hachés
 
 
@@ -18,6 +19,18 @@ const URI = process.env.MONGO_URI;
 mongoose.connect(URI)
 .then(() => console.log("Connecté à Atlas"))
 .catch(err => console.error('Erreur de connexion à Atlas :', err))
+
+// ✅ Route POST - Ajouter une dénonciation
+app.post('/api/denounce', async (req, res) => {
+    try {
+        const { name, lastName, adress, street, abuseType, message } = req.body;
+        const newDenounce = new Denounce({ name, lastName, adress, street, abuseType, message });
+        await newDenounce.save();
+        res.status(201).json(newDenounce);
+    } catch (err) {
+        res.status(400).json({ error: "Impossible d’ajouter la dénonciation" });
+    }
+});
 
 
 // ✅ Route pour récupérer tous les cours
