@@ -5,11 +5,11 @@ const badge = new BadgeGenerator("badge-example", {
     exportName: "image",
     downloadBtnId: "exportBtn"
 });
-function dessinerBadge(e){
+async function dessinerBadge(e){
     if (e){
         e.preventDefault();
     }
-    badge.clear();
+    await badge.clear();
     const mode = (form["badgeMode"].value)
     const rect = new BadgeRectLayer({
         height: 100,
