@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function login(email, password) {
             const userData = { 'email': email, 'password': password };
-            fetch("http://localhost:5000/api/users/login", {
+            fetch("https://bdd-mongo-vercel-nine.vercel.app/api/users/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(userData)

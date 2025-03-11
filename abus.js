@@ -38,7 +38,7 @@ if (userLogout) {
 function logout(email) {
     const userData = { 'email': email };
 
-    fetch("http://localhost:5000/api/users/logout", {
+    fetch("https://bdd-mongo-vercel-nine.vercel.app/api/users/logout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData)

@@ -56,7 +56,7 @@ async function inscription(nom, email, password) {
      "password" : password 
     };
   try {
-    const response = await fetch("http://localhost:5000/api/users", {
+    const response = await fetch("https://bdd-mongo-vercel-nine.vercel.app/api/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
@@ -84,7 +84,7 @@ async function inscription(nom, email, password) {
 
 async function checkUser(email) {
   try {
-    const response = await fetch("http://localhost:5000/api/users/check", {
+    const response = await fetch("https://bdd-mongo-vercel-nine.vercel.app/api/users/check", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),

@@ -33,7 +33,7 @@ function validateBtn(nom, prenom, adress, street, abuseType, message) {
     "message": message,
   };
 
-  fetch("http://localhost:5000/api/denounce", {
+  fetch("https://bdd-mongo-vercel-nine.vercel.app/api/denounce", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
