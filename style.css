@@ -237,3 +237,20 @@ blockquote {
 #coursesLink{
     display: none;
 }
+.great-title{
+    font-size: 6em;
+    color: #60241e;
+}
+
+.big-title-4-woman{
+    font-size: 2.3em; 
+    font-weight: bold;
+    color: #60241e;
+}
+
+.our-strong-women {
+    background-color: #fff7c5;
+}
+.card-title{
+    color: #60241e;
+}
